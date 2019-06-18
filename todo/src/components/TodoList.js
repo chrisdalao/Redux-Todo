@@ -23,9 +23,9 @@ class TodoList extends React.Component {
     this.props.toggleTodo(index);
   };
 
-  clearCompletedTodo = (e, index) => {
+  clearCompletedTodo = e => {
     e.preventDefault();
-    this.props.clearCompletedTodo(index);
+    this.props.clearCompletedTodo();
   };
 
   render() {

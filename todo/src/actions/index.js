@@ -16,9 +16,8 @@ export const toggleTodo = index => {
   };
 };
 
-export const clearCompletedTodo = index => {
+export const clearCompletedTodo = () => {
   return {
-    type: CLEAR_TODO,
-    payload: index
+    type: CLEAR_TODO
   };
 };
