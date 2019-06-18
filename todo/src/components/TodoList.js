@@ -34,12 +34,14 @@ class TodoList extends React.Component {
             </h4>
           ))}
         </div>
-        <input
-          type="text"
-          value={this.state.newTodo}
-          onChange={this.handleChanges}
-          placeholder="Add new Todo"
-        />
+        <form onSubmit={this.addTodo}>
+          <input
+            type="text"
+            value={this.state.newTodo}
+            onChange={this.handleChanges}
+            placeholder="Add new Todo"
+          />
+        </form>
         <button onClick={this.addTodo}>Add Todo</button>
       </React.Fragment>
     );
