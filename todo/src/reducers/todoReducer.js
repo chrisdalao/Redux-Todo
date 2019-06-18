@@ -19,6 +19,7 @@ export const todoReducer = (state = initialState, action) => {
       } else {
         alert(`your input is empty!`);
       }
+    //  eslint-disable-next-line
     case TOGGLE_TODO:
       return {
         ...state,
