@@ -11,10 +11,14 @@ export const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_NEW_TODO:
       const newTodo = { todo: action.payload, completed: false };
-      return {
-        ...state,
-        todos: [...state.todos, newTodo]
-      };
+      if (newTodo.todo !== "") {
+        return {
+          ...state,
+          todos: [...state.todos, newTodo]
+        };
+      } else {
+        alert(`your input is empty!`);
+      }
     case TOGGLE_TODO:
       return {
         ...state,
