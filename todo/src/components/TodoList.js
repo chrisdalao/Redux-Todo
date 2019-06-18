@@ -26,26 +26,28 @@ class TodoList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="todo-list">
+        <div className="todo-wrapper">
           {this.props.todos.map((todo, index) => (
             <div
               key={index}
               onClick={e => this.toggleTodo(e, index)}
-              className={`${todo.completed && "completed"}`}
+              className={`toDo ${todo.completed && "completed"}`}
             >
               {todo.todo}
             </div>
           ))}
+          <form onSubmit={this.addTodo}>
+            <input
+              type="text"
+              value={this.state.newTodo}
+              onChange={this.handleChanges}
+              placeholder="Add new Todo"
+            />
+            <button className="add-btn" onClick={this.addTodo}>
+              Add Todo
+            </button>
+          </form>
         </div>
-        <form onSubmit={this.addTodo}>
-          <input
-            type="text"
-            value={this.state.newTodo}
-            onChange={this.handleChanges}
-            placeholder="Add new Todo"
-          />
-          <button onClick={this.addTodo}>Add Todo</button>
-        </form>
       </React.Fragment>
     );
   }
