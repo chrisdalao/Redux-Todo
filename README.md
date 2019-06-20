@@ -1,19 +1,35 @@
-# TITLE
+# REACT REDUX TODO
 
-[NETLIFY DEPLOYMENT]('URL')
+[NETLIFY DEPLOYMENT]('https://cdredux-todo.netlify.com/')
 
-## Topics Covered
+## Application Coverage
 
 - Redux
 - mapStateToProps
 - Actions
+- Reducers
 
 ## The Application
 
 CRUD Functionality covered:
 
-### Topic 1
+### CREATE
 
-### Topic 2
+```
+export const addNewTodo = newTodo => {
+  return {
+    type: ADD_NEW_TODO,
+    payload: newTodo
+  };
+};
+```
 
-### Topic 3
+### DELETE
+
+```
+export const clearCompletedTodo = () => {
+  return {
+    type: CLEAR_TODO
+  };
+};
+```
