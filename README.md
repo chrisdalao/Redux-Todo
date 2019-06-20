@@ -1,6 +1,6 @@
 # REACT REDUX TODO
 
-[NETLIFY DEPLOYMENT](https://cdredux-todo.netlify.com/)
+[NETLIFY DEPLOYMENT](https://redux-todo-chrisdalao.netlify.com/)
 
 ## Application Coverage
 
