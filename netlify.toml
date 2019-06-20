@@ -2,6 +2,7 @@
  command = "cd todo; yarn build"
  functions = "functions"
  publish = "todo/build"
+ base= "todo"
 
  [[redirects]]
   from = "/*"
